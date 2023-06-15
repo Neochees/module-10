@@ -1,0 +1,32 @@
+*{
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+#gameWindow{
+    border: solid gray;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 50px;
+    height: 600px;
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.block{
+    width: 40px;
+    height: 175px;
+    background-color: white;
+    position: relative;
+}
+#ball{
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
