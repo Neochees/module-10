@@ -54,9 +54,9 @@ document.addEventListener('keyup', (event) => {
   keyboardState[event.key] = false;
 });
 
-const rect1 = new Rectangle(20, 20, 60, 250, "hotpink", ctx);
-const rect2 = new Rectangle(gameWindow.width - 70, 20, 60, 250, "red", ctx);
-const rect3 = new Rectangle((gameWindow.width /2) - 30, (gameWindow.height /2) - 30, 60, 60, "black", ctx);
+const rect1 = new Rectangle(20, 20, 60, 250, "white", ctx);
+const rect2 = new Rectangle(gameWindow.width - 70, 20, 60, 250, "white", ctx);
+const rect3 = new Rectangle((gameWindow.width /2) - 30, (gameWindow.height /2) - 30, 60, 60, "white", ctx);
 
 function gameLoop() {
   window.requestAnimationFrame(gameLoop);
@@ -78,21 +78,21 @@ function gameLoop() {
    }
 
 
-// rect3.setYPos(rect3.getYPos() + speed.y);
+
 
   if (rect3.getXPos() >= gameWindow.width - 60){
     speed.x = -2
   }else if (rect3.getXPos() <=  0){
     speed.x = 2
   }
-  // if(positiey>gameWindow.height){
-  //   speed.y = -2;
-  // }
-  // if(positiey<gameWindow.width){
-  //   speed.y = 2;
-  // }
+  else if (rect3.getYPos() >= gameWindow.height - 60){
+    speed.y = -2
+  }else if (rect3.getYPos() <=  0){
+    speed.y = 2
+  }
   console.log('speed', speed, gameWindow.width, rect3.getXPos())
   rect3.setXPos(rect3.getXPos() + speed.x);
+  rect3.setYPos(rect3.getYPos() + speed.y);
 //  draw frame
     rect1.draw();
     rect2.draw();
