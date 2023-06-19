@@ -12,7 +12,7 @@ function ballmove(){
     document.getElementById("ball").style.left = positiex + "px";
     document.getElementById("ball").style.top = positiey + "px";
    
-  if(positiex>555){
+  if(positiex>gameWindowWall.width/2-20){
     snelheidx = -2;
   }
   if(positiex<-555){
